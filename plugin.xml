@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="TalkingData" 
+        version="1.2.2">
+    
+    <name>TalkingData</name>
+    
+    <js-module src="www/TalkingData.js" name="TalkingData">
+        <clobbers target="TalkingData" />
+    </js-module>
+    
+    <!-- ios -->
+    <platform name="ios">
+        <header-file src="src/ios/TalkingData.h" />
+        <source-file src="src/ios/libTalkingData.a" framework="true" />
+        
+        <framework src="CoreMotion.framework" />
+        <framework src="SystemConfiguration.framework" />
+        <framework src="Security.framework" />
+        <framework src="CFNetwork.framework" />
+        <framework src="CoreTelephony.framework" />
+        <framework src="AdSupport.framework" weak="true" />
+        <framework src="libz.dylib" />
+        
+    </platform>
+    
+    <!-- android -->
+    <platform name="android">
+        
+        <source-file src="src/android/TalkingData.jar" target-dir="libs" />
+        
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+            <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+        </config-file>
+        
+    </platform>
+    
+</plugin>
