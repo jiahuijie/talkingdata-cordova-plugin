@@ -11,6 +11,10 @@ var TalkingData = {
         cordova.exec(null, null, "TalkingData", "init", [appKey, channelId]);
     },
 
+    sessionStarted:function(appKey, channelId) {
+        cordova.exec(null, null, "TalkingData", "sessionStarted", [appKey, channelId]);
+    },
+
     // 触发自定义事件
     // eventId   : 自定义事件的 eventId
     onEvent:function(eventId) {
