@@ -13,6 +13,8 @@
     <!-- ios -->
     <platform name="ios">
         <header-file src="src/ios/TalkingData.h" />
+        <header-file src="src/ios/TalkingDataPlugin.h" />
+        <source-file src="src/ios/TalkingDataPlugin.m" />
         <source-file src="src/ios/libTalkingData.a" framework="true" />
 
         <config-file target="config.xml" parent="/widget/plugins">
