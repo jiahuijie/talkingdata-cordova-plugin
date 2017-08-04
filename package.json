@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/TalkingData/TalkingData-Analytics-SDK-Cordova-Plugin.git"
+    "url": "https://github.com/jiahuijie/talkingdata-cordova-plugin.git"
   },
   "keywords": [
     "talkingdata",
