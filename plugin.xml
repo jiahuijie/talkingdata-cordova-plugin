@@ -5,6 +5,7 @@
         version="1.2.2">
     
     <name>TalkingData</name>
+    <repo>https://github.com/jiahuijie/talkingdata-cordova-plugin.git</repo>
     
     <js-module src="www/TalkingData.js" name="TalkingData">
         <clobbers target="TalkingData" />
